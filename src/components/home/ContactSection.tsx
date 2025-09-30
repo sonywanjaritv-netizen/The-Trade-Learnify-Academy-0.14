@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Phone,
   MapPin,
@@ -28,9 +29,19 @@ const ContactSection = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!recaptchaValue) {
+      setPopup({
+        show: true,
+        message: "Please complete the reCAPTCHA verification.",
+        type: "error",
+      });
+      return;
+    }
 
     setLoading(true);
 
@@ -45,6 +56,7 @@ const ContactSection = () => {
           },
           body: JSON.stringify({
             ...formData,
+            recaptcha: recaptchaValue,
             timestamp: new Date().toISOString(),
             source: "Contact Form - Home Page",
           }),
@@ -59,6 +71,12 @@ const ContactSection = () => {
       });
 
       setFormData({ name: "", number: "", city: "", message: "" });
+      setRecaptchaValue(null);
+      // Reset reCAPTCHA
+      const recaptchaElement = document.querySelector('.g-recaptcha');
+      if (recaptchaElement) {
+        window.grecaptcha?.reset();
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setPopup({
@@ -78,6 +96,10 @@ const ContactSection = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
   };
 
   return (
@@ -259,6 +281,13 @@ const ContactSection = () => {
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 text-gray-900 rounded-lg border border-gray-300 focus:border-green-500 focus:outline-none transition-colors duration-300 resize-none"
                   placeholder="Tell us about your trading goals (optional)"
+                />
+              </div>
+
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  sitekey="6Lf2dNkrAAAAAIriAJajDmTuW7hHOTOirIiBnALO"
+                  onChange={handleRecaptchaChange}
                 />
               </div>
 

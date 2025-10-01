@@ -5,22 +5,16 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: 'Abhitesh Singh',
-      role: 'Educational Program Head',
-      expertise: 'Curriculum Development & Student Mentoring',
       position: 'Business Partner',
       image: '/mentor/Abhitesh Singh.jpg'
     },
     {
       name: 'Mayank Chinchalkar',
-      role: 'Lead Trading Strategist',
-      expertise: 'Technical Analysis & Risk Management',
       position: 'Business Partner',
       image: '/mentor/Mayank Chinchalkar.jpg'
     },
     {
       name: 'Vinay Pohankar',
-      role: 'Market Research Director',
-      expertise: 'Fundamental Analysis & Market Psychology',
       position: 'Business Partner',
       image: '/mentor/Vinay Pohankar.jpg'
     }
@@ -100,8 +94,8 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Mission &{' '}
@@ -138,11 +132,11 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          
-          {/* Decorative Elements */}
-          <div className="absolute top-20 right-20 w-32 h-32 bg-green-500/5 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl"></div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-20 w-32 h-32 bg-green-500/5 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl"></div>
       </section>
 
       {/* Team Section */}

@@ -372,7 +372,7 @@ const TestimonialsPage = () => {
 
           <div className="text-center mt-12">
             <a
-              href="https://www.google.com/search?q=The+Trade+Learnify+%7C+Stock+Market+Academy+Reviews"
+              href="https://www.google.com/search?sca_esv=79b3e61bd2633932&sxsrf=AE3TifND6w41kq0GLdVemCGlPFFaweQ-9g:1759317930937&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_jsyuCcg92BLrIVC6rCsexIJRDPAPyGy9-Xtej8DPegEw6I3eXa0pZj88XInKi9STMR8lC646IWy-ypR6Y2SKbRgvWBJ7hPlNgTbcLY6-i4PaEO42C5E1WjlE6-Iav99nxEyEo%3D&q=The+Trade+Learnify+%7C+Stock+Market+Academy+Reviews&sa=X&ved=2ahUKEwjf9seC8oKQAxVQWHADHQsAEG0Q0bkNegQIIBAD&biw=1366&bih=633&dpr=1"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold"

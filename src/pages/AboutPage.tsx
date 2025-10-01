@@ -4,28 +4,34 @@ import { Award, Target, Eye, Users } from 'lucide-react';
 const AboutPage = () => {
   const teamMembers = [
     {
+      name: 'Abhitesh Singh',
+      role: 'Educational Program Head',
+      expertise: 'Curriculum Development & Student Mentoring',
+      position: 'Business Partner',
+      image: '/mentor/Abhitesh Singh.jpg'
+    },
+    {
       name: 'Mayank Chinchalkar',
       role: 'Lead Trading Strategist',
-      expertise: 'Technical Analysis & Risk Management'
+      expertise: 'Technical Analysis & Risk Management',
+      position: 'Business Partner',
+      image: '/mentor/Mayank Chinchalkar.jpg'
     },
     {
       name: 'Vinay Pohankar',
       role: 'Market Research Director',
-      expertise: 'Fundamental Analysis & Market Psychology'
-    },
-    {
-      name: 'Abhitesh Singh',
-      role: 'Educational Program Head',
-      expertise: 'Curriculum Development & Student Mentoring'
+      expertise: 'Fundamental Analysis & Market Psychology',
+      position: 'Business Partner',
+      image: '/mentor/Vinay Pohankar.jpg'
     }
   ];
 
   const achievements = [
-    'Trained more than 1000 aspiring traders across India',
+    'Trained more than 2500 aspiring traders across India',
     '6-Month structured programs (online & offline) with a proven success framework',
     'Developed data-driven & backtested trading strategies with higher win rates',
     'Built a strong trading community where students grow together and support each other',
-    'One-on-one mentorship provided to 500+ learners for personalized trading guidance',
+    'One-on-one mentorship provided to 2000+ learners for personalized trading guidance',
     'Delivered 100+ interactive workshops & webinars on trading psychology, risk management, and strategy building',
     'Helped beginners become consistent traders with simplified, step-by-step learning',
     'Designed personalized trading plans through individual viva sessions',
@@ -94,29 +100,48 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <Target className="text-green-600 mr-4" size={32} />
-                <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Mission &{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
+                Vision
+              </span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="relative">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-12 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2">
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Target className="text-white" size={32} />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 mt-4">Our Mission</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-green-500 rounded-full mb-6"></div>
+                <p className="text-gray-700 leading-relaxed text-lg font-medium">
+                  Our Goal is to help 10000 People Achieve Financial Freedom in a simple and Honest way
+                </p>
               </div>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Our Goal is to help 10000 People Achieve Financial Freedom in a simple and Honest way
-              </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <Eye className="text-green-600 mr-4" size={32} />
-                <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-12 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-2">
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Eye className="text-white" size={32} />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 mt-4">Our Vision</h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full mb-6"></div>
+                <p className="text-gray-700 leading-relaxed text-lg font-medium">
+                  To help every student earn profits that showed up in their passbook
+                </p>
               </div>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                To help every student earn profits that showed up in their passbook
-              </p>
             </div>
           </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute top-20 right-20 w-32 h-32 bg-green-500/5 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-blue-500/5 rounded-full blur-2xl"></div>
         </div>
       </section>
 
@@ -139,14 +164,24 @@ const AboutPage = () => {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 text-center border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:transform hover:-translate-y-2"
+                className="bg-white rounded-2xl p-8 text-center border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-3"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Users className="text-green-600" size={40} />
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-green-200 shadow-lg">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-md">
+                    <Users className="text-white" size={16} />
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-green-600 font-semibold mb-4">{member.role}</p>
-                <p className="text-gray-600">{member.expertise}</p>
+                <p className="text-green-600 font-semibold mb-2">{member.role}</p>
+                <p className="text-blue-600 font-medium text-sm mb-3">{member.position}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.expertise}</p>
               </div>
             ))}
           </div>

@@ -372,7 +372,7 @@ const TestimonialsPage = () => {
 
           <div className="text-center mt-12">
             <a
-              href="https://www.google.com/search?q=The+Trade+Learnify+Academy+reviews"
+              href="https://www.google.com/search?q=The+Trade+Learnify+%7C+Stock+Market+Academy+Reviews"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold"

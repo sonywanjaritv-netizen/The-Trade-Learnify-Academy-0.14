@@ -35,7 +35,7 @@ const FAQSection = () => {
     },
     {
       question: 'How many times can I revise the course?',
-      answer: 'You get lifetime access to course materials and can revise the content as many times as needed. Additionally, we provide 6 months of post-course support for continued guidance.'
+      answer: 'Unlimited times in your 6 months course.'
     },
     {
       question: 'Why choose us?',

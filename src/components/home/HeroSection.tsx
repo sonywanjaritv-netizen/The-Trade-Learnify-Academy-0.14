@@ -97,7 +97,7 @@ const HeroSection = () => {
                     <div className="text-green-600 text-sm">Success Rate</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">500+</div>
+                    <div className="text-2xl font-bold text-gray-900">2500+</div>
                     <div className="text-green-600 text-sm">Students</div>
                   </div>
                   <div>

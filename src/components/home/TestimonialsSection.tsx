@@ -241,7 +241,7 @@ const TestimonialsSection = () => {
               </div>
               <span className="text-xl font-bold text-gray-900">4.9/5</span>
               <span className="text-gray-600">
-                ({selectedProgram === "offline" ? "87" : "65"} reviews)
+                ({selectedProgram === "offline" ? "150" : "95"} reviews)
               </span>
             </div>
           </div>

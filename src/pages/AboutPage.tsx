@@ -166,22 +166,17 @@ const AboutPage = () => {
                 key={index}
                 className="bg-white rounded-2xl p-8 text-center border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:transform hover:-translate-y-3"
               >
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-green-200 shadow-lg">
+                <div className="mb-6">
+                  <div className="w-48 h-48 mx-auto rounded-2xl overflow-hidden shadow-lg">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-md">
-                    <Users className="text-white" size={16} />
-                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-green-600 font-semibold mb-2">{member.role}</p>
-                <p className="text-blue-600 font-medium text-sm mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.expertise}</p>
+                <p className="text-gray-600 font-medium">{member.position}</p>
               </div>
             ))}
           </div>
